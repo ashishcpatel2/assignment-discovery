@@ -2,6 +2,7 @@ import './styles.scss'
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import YouTube from 'react-youtube';
 
 import { getVideo } from '../../state/actions/videos';
 
@@ -36,6 +37,7 @@ export default class Videopage extends Component {
 
     return (
       <div id="videopage">
+        <YouTube videoId={video.id} />
         <h1>{video.snippet.title}</h1>
         <p>{video.snippet.description}</p>
       </div>

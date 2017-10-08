@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 
 import Authorize from '../../components/Authorize'
 import VideoTile from '../../components/VideoTile'
+import Pager from '../../components/Pager'
 import { getVideos } from '../../state/actions/videos';
 
 @connect(
@@ -54,6 +55,12 @@ export default class Homepage extends Component {
                 </div>
               ))
             }
+          </div>
+          <div>
+            <Pager handler={(callback) => {
+              console.log('Yaay');
+              callback();
+            }} />
           </div>
           </div>
         }
